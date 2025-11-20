@@ -82,14 +82,31 @@
           <p class="text-sm text-slate-300 mb-4">
             View real-time status for key church IT services.
           </p>
-
+        
           <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
             <h3 class="text-sm font-medium text-slate-200 mb-3">Status</h3>
-
-            <!-- Better Stack / Better Uptime embed -->
-            <iframe src="https://status.ltl.church/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
-
-            <!-- Optional link to full status page -->
+        
+            <!-- Better Stack / Better Uptime status badge -->
+            <iframe
+              src="https://status.ltl.church/badge?theme=dark"
+              width="250"
+              height="30"
+              frameborder="0"
+              scrolling="no"
+              style="color-scheme: normal"
+            ></iframe>
+        
+            <!-- Service announcement (shown only when active in Better Stack) -->
+            <div class="mt-4">
+              <script
+                src="https://uptime.betterstack.com/widgets/announcement.js"
+                data-id="211661"
+                async="async"
+                type="text/javascript">
+              </script>
+            </div>
+        
+            <!-- Link to full status page -->
             <div class="mt-3 text-xs text-slate-400">
               <a href="https://status.ltl.church" class="underline hover:text-slate-200">
                 View full status page

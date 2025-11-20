@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTL IT Portal</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via CDN (for quick styling) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* Simple card hover */
+    .card {
+      transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+      background-color: rgb(248, 250, 252);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+
+  <!-- Page wrapper -->
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Header / Hero -->
+    <header class="relative isolate overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
+      <div class="mx-auto max-w-5xl px-4 py-12 sm:py-16 lg:py-20">
+        <div class="flex flex-col gap-6">
+          <div>
+            <p class="inline-flex items-center rounded-full bg-slate-900/60 ring-1 ring-slate-700/60 px-3 py-1 text-xs font-medium text-slate-300 mb-4">
+              LIVE THE LIFE CHURCH · IT
+            </p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-50">
+              LTL IT Portal
+            </h1>
+            <p class="mt-3 max-w-2xl text-sm sm:text-base text-slate-300">
+              Your One-Stop Hub for IT Support, Resources, and Solutions.
+            </p>
+          </div>
+
+          <!-- Quick links -->
+          <nav class="flex flex-wrap gap-3 text-sm">
+            <!-- TODO: update hrefs to your live URLs -->
+            <a href="http://helpdesk.ltl.church/support/home" class="inline-flex items-center rounded-full border border-slate-700/80 bg-slate-900/60 px-3 py-1 text-slate-200 hover:bg-slate-800">
+              Support Portal
+            </a>
+            <a href="https://helpdesk.ltl.church/support/solutions" class="inline-flex items-center rounded-full border border-slate-700/80 bg-slate-900/60 px-3 py-1 text-slate-200 hover:bg-slate-800">
+              Knowledge Base
+            </a>
+            <a href="https://helpdesk.ltl.church/support/tickets/new" class="inline-flex items-center rounded-full border border-slate-700/80 bg-slate-900/60 px-3 py-1 text-slate-200 hover:bg-slate-800">
+              Help Desk
+            </a>
+            <a href="https://forms.gle/CSsfkkMbQgdqHxH39" class="inline-flex items-center rounded-full border border-slate-700/80 bg-slate-900/60 px-3 py-1 text-slate-200 hover:bg-slate-800">
+              Account Request
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-1 bg-slate-950">
+      <div class="mx-auto max-w-5xl px-4 pb-16 pt-6 space-y-16">
+
+        <!-- Service Monitoring -->
+        <section id="service-monitoring">
+          <h2 class="text-xl sm:text-2xl font-semibold text-slate-50 mb-2">
+            Service Monitoring
+          </h2>
+          <p class="text-sm text-slate-300 mb-4">
+            View real-time status for key church IT services.
+          </p>
+
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+            <h3 class="text-sm font-medium text-slate-200 mb-3">Status</h3>
+
+            <!-- Better Stack / Better Uptime embed -->
+            <iframe src="https://status.ltl.church/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
+
+            <!-- Optional link to full status page -->
+            <div class="mt-3 text-xs text-slate-400">
+              <a href="https://status.ltl.church" class="underline hover:text-slate-200">
+                View full status page
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feature cards -->
+        <section aria-label="IT Services" class="space-y-10">
+          <!-- Support Portal -->
+          <div class="grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-center">
+            <div class="order-2 md:order-1">
+              <h2 class="text-lg sm:text-xl font-semibold text-slate-50">Support Portal</h2>
+              <p class="mt-2 text-sm text-slate-300">
+                A support portal is a centralized hub for submitting and tracking tickets,
+                accessing guides and FAQs, and quickly finding solutions to common IT issues.
+              </p>
+              <a href="http://helpdesk.ltl.church/support/home" class="mt-3 inline-flex items-center text-sm font-medium text-sky-400 hover:text-sky-300">
+                Go to Support Portal →
+              </a>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="card rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                <div class="text-xs uppercase tracking-wide text-sky-400 font-medium mb-2">
+                  Self-Service
+                </div>
+                <p class="text-sm text-slate-200">
+                  Log in to submit new requests, check ticket status, and browse IT resources in one place.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Help Desk -->
+          <div class="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
+            <div>
+              <div class="card rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                <div class="text-xs uppercase tracking-wide text-emerald-400 font-medium mb-2">
+                  Help Desk
+                </div>
+                <p class="text-sm text-slate-200">
+                  A support platform where users can submit IT issues or requests and receive assistance,
+                  ensuring quick resolutions and streamlined communication.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-lg sm:text-xl font-semibold text-slate-50">Help Desk</h2>
+              <p class="mt-2 text-sm text-slate-300">
+                Use the Help Desk when something isn’t working, you’re locked out, or you need hands-on support.
+              </p>
+              <a href="http://helpdesk.ltl.church/support/tickets/new" class="mt-3 inline-flex items-center text-sm font-medium text-emerald-400 hover:text-emerald-300">
+                Submit a Help Desk ticket →
+              </a>
+            </div>
+          </div>
+
+          <!-- System Status & Service Updates -->
+          <div class="grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-center">
+            <div class="order-2 md:order-1">
+              <h2 class="text-lg sm:text-xl font-semibold text-slate-50">
+                System Status &amp; Service Updates
+              </h2>
+              <p class="mt-2 text-sm text-slate-300">
+                Get real-time updates on email, Wi-Fi, apps, and web services.
+                Check for maintenance, outages, and service health on our Status Page.
+              </p>
+              <a href="http://status.ltl.church/" class="mt-3 inline-flex items-center text-sm font-medium text-amber-400 hover:text-amber-300">
+                Open Status Page →
+              </a>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="card rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                <div class="text-xs uppercase tracking-wide text-amber-400 font-medium mb-2">
+                  Service Health
+                </div>
+                <p class="text-sm text-slate-200">
+                  Check whether core systems are operational before submitting a ticket.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Knowledge Base -->
+          <div class="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
+            <div>
+              <div class="card rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                <div class="text-xs uppercase tracking-wide text-violet-400 font-medium mb-2">
+                  Knowledge Base
+                </div>
+                <p class="text-sm text-slate-200">
+                  A centralized hub of step-by-step guides, FAQs, and resources designed to
+                  help you quickly find answers and solve common IT issues.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-lg sm:text-xl font-semibold text-slate-50">Knowledge Base</h2>
+              <p class="mt-2 text-sm text-slate-300">
+                Start here for “how do I…” questions like connecting to Wi-Fi, setting up email,
+                or printing on campus.
+              </p>
+              <a href="http://helpdesk.ltl.church/support/solutions" class="mt-3 inline-flex items-center text-sm font-medium text-violet-400 hover:text-violet-300">
+                Browse articles →
+              </a>
+            </div>
+          </div>
+
+          <!-- Account Request -->
+          <div class="grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-center">
+            <div class="order-2 md:order-1">
+              <h2 class="text-lg sm:text-xl font-semibold text-slate-50">Account Request</h2>
+              <p class="mt-2 text-sm text-slate-300">
+                Streamlines the process of requesting new user accounts or access to systems,
+                ensuring quick and secure onboarding with minimal effort.
+              </p>
+              <a href="https://forms.gle/CSsfkkMbQgdqHxH39" class="mt-3 inline-flex items-center text-sm font-medium text-pink-400 hover:text-pink-300">
+                Request an account →
+              </a>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="card rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                <div class="text-xs uppercase tracking-wide text-pink-400 font-medium mb-2">
+                  Onboarding
+                </div>
+                <p class="text-sm text-slate-200">
+                  Use this form for new staff, volunteers, and role changes that require access to IT systems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950">
+      <div class="mx-auto max-w-5xl px-4 py-8 text-xs sm:text-sm text-slate-400 space-y-3">
+        <div class="font-semibold text-slate-200">
+          LIVE THE LIFE CHURCH
+        </div>
+        <div>5595 US Hwy 87 E · San Antonio, TX 78222</div>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="https://ltl.church" class="underline hover:text-slate-200">
+            Main Site
+          </a>
+          <a href="http://helpdesk.ltl.church/support/home" class="underline hover:text-slate-200">
+            Support Portal
+          </a>
+          <a href="http://helpdesk.ltl.church/support/solutions" class="underline hover:text-slate-200">
+            Knowledge Base
+          </a>
+          <a href="http://helpdesk.ltl.church/support/tickets/new" class="underline hover:text-slate-200">
+            Help Desk
+          </a>
+          <a href="https://forms.gle/CSsfkkMbQgdqHxH39" class="underline hover:text-slate-200">
+            Account Request
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
